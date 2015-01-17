@@ -9,6 +9,7 @@ RUN curl -s -o /tmp/influxdb_latest_amd64.deb https://s3.amazonaws.com/influxdb/
   rm -rf /var/lib/apt/lists/*
 
 ADD config.toml /config/config.toml
+ADD types.db /config/types.db
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
@@ -24,6 +25,12 @@ EXPOSE 8086
 
 # HTTPS API
 EXPOSE 8084
+
+# Graphite API
+EXPOSE 2003
+
+# Collectd API
+EXPOSE 8096
 
 # Raft port (for clustering, don't expose publicly!)
 #EXPOSE 8090
