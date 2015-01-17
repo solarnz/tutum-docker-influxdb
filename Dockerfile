@@ -30,7 +30,7 @@ EXPOSE 8084
 EXPOSE 2003
 
 # Collectd API
-EXPOSE 8096
+EXPOSE 25826
 
 # Raft port (for clustering, don't expose publicly!)
 #EXPOSE 8090
