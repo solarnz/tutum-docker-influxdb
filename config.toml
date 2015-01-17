@@ -44,7 +44,7 @@ read-timeout = "5s"
 
   [input_plugins.collectd]
   enabled = true
-  port = 8096
+  port = 25826
   database = "collectd"
   typesdb = "/config/types.db"
 
